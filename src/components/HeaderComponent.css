@@ -1,0 +1,90 @@
+/*
+  Navigation Container styles
+*/
+
+.nav-container {
+  @apply flex items-center justify-between flex-wrap px-8 py-5 fixed top-0 w-full h-screen bg-secondary;
+}
+
+@media (min-width: 640px) {
+  .sm\:nav-container {
+    @apply px-12;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:nav-container {
+    @apply px-16;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:nav-container {
+    @apply h-auto px-32;
+  }
+}
+
+/*
+  Navigation Container Animation
+*/
+
+.nav-slide--enter-active {
+  animation: slide 0.4s;
+}
+.nav-slide-leave-active {
+  animation: slide 0.4s reverse;
+}
+@keyframes slide {
+  0% {
+    top: -10rem;
+    box-shadow: 0;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+
+/*
+  Title Container styles
+*/
+
+.title-container {
+  @apply flex items-center flex-shrink-0 cursor-pointer;
+}
+
+.title-container-hover:hover > span:nth-child(2) {
+  @apply animate-letter;
+}
+
+/*
+  Title Angle Bracket styles
+*/
+.angle-bracket {
+  @apply text-gray-400 text-4xl antialiased;
+}
+
+/*
+  Title Front Slash styles
+*/
+
+.front-slash {
+  @apply text-teal-400 text-5xl font-black antialiased;
+}
+
+/*
+  Title text styles
+*/
+
+.title-text {
+  @apply text-white text-5xl ml-2 mr-2 antialiased font-extrabold custom-letter;
+}
+
+/*
+  Custom Letter spacing for title
+*/
+
+.custom-letter {
+  letter-spacing: -0.3rem;
+}
