@@ -28,7 +28,7 @@
   Navigation Container Animation
 */
 
-.nav-slide--enter-active {
+.nav-slide-enter-active {
   animation: slide 0.4s;
 }
 .nav-slide-leave-active {
@@ -44,7 +44,6 @@
     top: 0;
   }
 }
-
 
 /*
   Title Container styles
