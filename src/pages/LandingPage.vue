@@ -1,25 +1,29 @@
 <template>
-  <div>
+  <div class="flex flex-initial justify-center items-center flex-col w-screen h-auto">
     <HeaderComponent />
-    <HomeContainer>
-      <h1 style="padding-top: 200px; font-size: 20px; color: white;">{{SCROLL_POSITION}}</h1>
-    </HomeContainer>
-    <HomeContainer>
-      <h1 style="padding-top: 200px; font-size: 20px; color: white;">{{SCROLL_POSITION}}</h1>
-    </HomeContainer>
+    <MaxWidthComponent>
+      <HomeContainer>
+        <h1 style="padding-top: 200px; font-size: 20px; color: white;">{{SCROLL_POSITION}}</h1>
+      </HomeContainer>
+      <HomeContainer>
+        <h1 style="padding-top: 200px; font-size: 20px; color: white;">{{SCROLL_POSITION}}</h1>
+      </HomeContainer>
+    </MaxWidthComponent>
   </div>
 </template>
 <script>
 import { mapState } from "vuex";
 
 import HomeContainer from "../containers/HomeContainer";
-import HeaderComponent from "../components/HeaderComponent";
+import HeaderComponent from "../components/HeaderComponent/HeaderComponent";
+import MaxWidthComponent from "../components/MaxWidthComponent/MaxWidthComponent";
 
 export default {
   name: "LandingPage",
   components: {
     HomeContainer,
     HeaderComponent,
+    MaxWidthComponent,
   },
   created: function () {
     window.addEventListener(
@@ -27,7 +31,7 @@ export default {
       () => {
         const scrolledTo =
           window.pageYOffset || document.documentElement.scrollTop;
-        if (scrolledTo > 100 && scrolledTo > this.SCROLL_POSITION) {
+        if (scrolledTo > 60 && scrolledTo > this.SCROLL_POSITION) {
           this.setScrollDirection("DOWN");
         } else {
           this.setScrollDirection("UP");

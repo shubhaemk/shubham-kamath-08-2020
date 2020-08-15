@@ -1,6 +1,10 @@
 module.exports = {
   purge: ["./src/**/*.html", "./src/**/*.vue"],
   theme: {
+    fontSize: {
+      "3-5xl": "2rem",
+      "5-5xl": "3.2rem",
+    },
     minWidth: {
       "0": "0",
       "1/4": "25%",
@@ -47,7 +51,7 @@ module.exports = {
       keyframes: {
         expand: {
           "0%, 100%": { letterSpacing: "-0.12rem" },
-          "50%": { letterSpacing: "3rem" },
+          "50%": { letterSpacing: "1rem" },
         },
       },
       animation: {

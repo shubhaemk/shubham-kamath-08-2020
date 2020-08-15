@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen min-h-50 home">
+  <div class="h-screen min-h-50">
     <slot></slot>
   </div>
 </template>
@@ -11,6 +11,6 @@ export default {
 
 <style scoped>
 .home {
-  background-color: #0f0f1f;
+  background-color: #000000;
 }
 </style>
