@@ -1,5 +1,7 @@
 <template>
-  <div class="w-full h-auto max-w-almostFull md:max-w-almost lg:max-w-3/4">
+  <div
+    class="w-full h-auto max-w-almostFull md:max-w-almost lg:max-w-3/4 4k:max-w-1/2"
+  >
     <slot></slot>
   </div>
 </template>
