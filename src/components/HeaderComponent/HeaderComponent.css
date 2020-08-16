@@ -3,28 +3,12 @@
 */
 
 .nav-container {
-  @apply flex justify-center items-center flex-wrap h-24 w-full fixed top-0 min-w-full;
+  @apply flex justify-center items-center flex-wrap w-full fixed top-0;
 }
 
 .nav-container-child {
   @apply flex justify-between items-center flex-wrap self-center;
 }
-
-@media (min-width: 640px) {
-  .sm\:nav-container {
-  }
-}
-
-@media (min-width: 768px) {
-  .md\:nav-container {
-  }
-}
-
-@media (min-width: 1024px) {
-  .lg\:nav-container {
-  }
-}
-
 /*
   Navigation Container Animation
 */
@@ -58,7 +42,7 @@
   Title Angle Bracket styles
 */
 .angle-bracket {
-  @apply text-blue-800 text-3-5xl font-semibold antialiased;
+  @apply text-blue-800 text-3-5xl font-semibold antialiased select-none;
 }
 
 /*
@@ -66,7 +50,7 @@
 */
 
 .front-slash {
-  @apply text-teal-400 text-3-5xl font-semibold antialiased;
+  @apply text-teal-400 text-3-5xl font-semibold antialiased select-none;
 }
 
 /*
@@ -74,7 +58,7 @@
 */
 
 .title-text {
-  @apply text-black text-5-5xl ml-1 mr-3 antialiased font-black custom-letter;
+  @apply text-black text-5-5xl ml-1 mr-3 antialiased font-black custom-letter select-none;
 }
 
 /*

@@ -1,10 +1,12 @@
 import Vue from "vue";
+import VScrollLock from "v-scroll-lock";
 
 import App from "./App.vue";
 import store from "./store";
 import "./styles/tailwind.css";
 
 Vue.config.productionTip = false;
+Vue.use(VScrollLock);
 
 const VueApp = new Vue({
   render: (createApp) => createApp(App),

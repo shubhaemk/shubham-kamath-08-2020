@@ -1,12 +1,22 @@
 <template>
-  <div class="flex flex-initial justify-center items-center flex-col w-screen h-auto">
-    <HeaderComponent />
-    <MaxWidthComponent>
+  <div
+    class="flex flex-initial justify-center items-center flex-col w-screen h-auto"
+  >
+    <HeaderComponent
+      :isMenuOpen="isMenuOpen"
+      :menuText="menuText"
+      @toggle-menu="toggleMenu"
+    />
+    <MaxWidthComponent v-scroll-lock="isMenuOpen">
       <HomeContainer>
-        <h1 style="padding-top: 200px; font-size: 20px; color: white;">{{SCROLL_POSITION}}</h1>
+        <h1 style="padding-top: 200px; font-size: 20px; color: white;">
+          {{ SCROLL_POSITION }}
+        </h1>
       </HomeContainer>
       <HomeContainer>
-        <h1 style="padding-top: 200px; font-size: 20px; color: white;">{{SCROLL_POSITION}}</h1>
+        <h1 style="padding-top: 200px; font-size: 20px; color: white;">
+          {{ SCROLL_POSITION }}
+        </h1>
       </HomeContainer>
     </MaxWidthComponent>
   </div>
@@ -18,6 +28,9 @@ import HomeContainer from "../containers/HomeContainer";
 import HeaderComponent from "../components/HeaderComponent/HeaderComponent";
 import MaxWidthComponent from "../components/MaxWidthComponent/MaxWidthComponent";
 
+const MENU_TEXT = "MENU";
+const OTHER_MENU_TEXT = "CLOSE";
+
 export default {
   name: "LandingPage",
   components: {
@@ -25,7 +38,7 @@ export default {
     HeaderComponent,
     MaxWidthComponent,
   },
-  created: function () {
+  created: function() {
     window.addEventListener(
       "scroll",
       () => {
@@ -47,13 +60,24 @@ export default {
     ...mapState({
       SCROLL_POSITION: (state) => state.appBehavior.SCROLL_POSITION,
     }),
+    isMenuOpen: function() {
+      return this.menuText === OTHER_MENU_TEXT;
+    },
+  },
+  data: function() {
+    return {
+      menuText: MENU_TEXT,
+    };
   },
   methods: {
-    setScrollDirection: function (direction) {
+    setScrollDirection: function(direction) {
       this.$store.dispatch("appBehavior/setScrollDirection", direction);
     },
-    setScrollPosition: function (position) {
+    setScrollPosition: function(position) {
       this.$store.dispatch("appBehavior/setScrollPosition", position);
+    },
+    toggleMenu: function() {
+      this.menuText = this.menuText === MENU_TEXT ? OTHER_MENU_TEXT : MENU_TEXT;
     },
   },
 };
