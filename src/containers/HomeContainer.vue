@@ -9,8 +9,5 @@ export default {
 };
 </script>
 
-<style scoped>
-.home {
-  background-color: #000000;
-}
+<style>
 </style>

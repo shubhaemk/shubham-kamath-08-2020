@@ -6,9 +6,14 @@
   @apply flex justify-center flex-col items-center flex-wrap w-full fixed top-0;
 }
 
-.nav-container-child {
+.nav-container-header {
   @apply flex justify-between items-center flex-wrap self-center;
 }
+
+.nav-container-menu {
+  @apply h-full w-full items-center flex-wrap self-center;
+}
+
 /*
   Navigation Container Animation
 */
@@ -35,7 +40,7 @@
 */
 
 .nav-item {
-  @apply flex items-center flex-shrink-0 cursor-pointer w-56;
+  @apply flex items-center flex-shrink-0 cursor-pointer w-56 h-24;
 }
 
 .nav-item:first-child {
@@ -50,7 +55,7 @@
   Title Angle Bracket styles
 */
 .angle-bracket {
-  @apply text-blue-800 text-3-5xl font-semibold antialiased select-none;
+  @apply text-teal-400 text-3-5xl font-semibold antialiased select-none;
 }
 
 /*
@@ -66,7 +71,7 @@
 */
 
 .title-text {
-  @apply text-black text-3-5xl ml-1 mr-3 antialiased font-black custom-letter select-none;
+  @apply text-white text-3-5xl ml-1 mr-1 antialiased font-black custom-letter select-none;
 }
 
 @media (min-width: 640px) {
@@ -83,7 +88,7 @@
 
 @media (min-width: 1280px) {
   .xl\:title-text {
-    @apply text-5-5xl;
+    @apply text-6xl;
   }
 }
 
@@ -98,14 +103,14 @@
 */
 
 .custom-letter {
-  letter-spacing: -0.21rem;
+  letter-spacing: -0.35rem;
 }
 
 /*
   Bracket Animations
 */
 
-.nav-item:hover > span:nth-child(4) {
+.nav-item:hover > span:last-child {
   animation: animate-bracket 1s 300ms;
 }
 

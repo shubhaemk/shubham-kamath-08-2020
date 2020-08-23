@@ -1,7 +1,7 @@
 <template>
   <transition name="nav-slide">
     <nav class="nav-container" v-if="SCROLL_DIRECTION === 'UP'">
-      <MaxWidthComponent class="nav-container-child">
+      <MaxWidthComponent class="nav-container-header">
         <div class="nav-item">
           <span class="angle-bracket" v-html="'<'" />
           <span
@@ -14,16 +14,18 @@
           <span class="angle-bracket" v-html="'<'" />
           <span
             class="title-text md:title-text lg:title-text xl:title-text 4k:title-text"
-          >{{ menuText }}</span>
+          >{{menuText}}</span>
           <span class="front-slash" v-html="'/'" />
           <span class="angle-bracket" v-html="'>'" />
         </div>
       </MaxWidthComponent>
-      <MaxWidthComponent class="nav-container-child" v-if="isMenuOpen">
+      <div class="nav-container-menu" v-if="isMenuOpen">
         <div class="h-screen w-screen flex flex-col-reverse md:flex-row overflow-hidden">
           <div class="h-full w-full md:h-full md:w-1/2">
             <transition name="fade4">
-              <div v-if="isMenuOpenDelayed" class="h-full w-full bg-teal-200 -translate-x-full" />
+              <div v-if="isMenuOpenDelayed" class="h-full w-full bg-teal-500 -translate-x-full">
+                <p class="text-white text-6xl">FADE 4</p>
+              </div>
             </transition>
           </div>
 
@@ -31,10 +33,9 @@
             <div class="h-auto min-h-1/2 w-full flex">
               <div class="h-full w-1/2 flex flex-col">
                 <transition name="fade2">
-                  <div
-                    v-if="isMenuOpenDelayed"
-                    class="h-full w-full bg-teal-200 -translate-x-full"
-                  />
+                  <div v-if="isMenuOpenDelayed" class="h-full w-full bg-teal-300 -translate-x-full">
+                    <p class="text-white text-6xl">FADE 2</p>
+                  </div>
                 </transition>
               </div>
 
@@ -43,8 +44,10 @@
                   <transition name="fade">
                     <div
                       v-if="isMenuOpenDelayed"
-                      class="h-full w-full bg-teal-200 -translate-x-full"
-                    ></div>
+                      class="h-full w-full -translate-x-full bg-teal-100"
+                    >
+                      <p class="text-white text-6xl">FADE 0</p>
+                    </div>
                   </transition>
                 </div>
                 <div class="h-auto min-h-1/2 w-full">
@@ -52,19 +55,23 @@
                     <div
                       v-if="isMenuOpenDelayed"
                       class="h-full w-full bg-teal-200 translate-y-full"
-                    ></div>
+                    >
+                      <p class="text-white text-6xl">FADE 1</p>
+                    </div>
                   </transition>
                 </div>
               </div>
             </div>
             <div class="h-auto min-h-1/2 w-full">
               <transition name="fade3">
-                <div v-if="isMenuOpenDelayed" class="h-full w-full bg-teal-200 translate-y-full"></div>
+                <div v-if="isMenuOpenDelayed" class="h-full w-full bg-teal-400 -translate-y-full">
+                  <p class="text-white text-6xl">FADE 3</p>
+                </div>
               </transition>
             </div>
           </div>
         </div>
-      </MaxWidthComponent>
+      </div>
     </nav>
   </transition>
 </template>
@@ -139,13 +146,13 @@ export default {
   transition: all 0.3s 1.3s;
 }
 
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+.fade-enter,
+.fade-leave-to {
   transform: translateX(100%);
   opacity: 0;
 }
 
-.fade1-enter-active,
-.fade1-leave-active {
+.fade1-enter-active {
   transition: all 0.3s 0.5s;
 }
 
@@ -153,7 +160,8 @@ export default {
   transition: all 0.3s 1s;
 }
 
-.fade1-enter, .fade1-leave-to /* .fade-leave-active below version 2.1.8 */ {
+.fade1-enter,
+.fade1-leave-to {
   transform: translateY(-100%);
   opacity: 0;
 }
@@ -162,7 +170,8 @@ export default {
 .fade2-leave-active {
   transition: all 0.3s 0.7s;
 }
-.fade2-enter, .fade2-leave-to /* .fade-leave-active below version 2.1.8 */ {
+.fade2-enter,
+.fade2-leave-to {
   transform: translateX(100%);
   opacity: 0;
 }
@@ -175,8 +184,9 @@ export default {
   transition: all 0.3s 0.5s;
 }
 
-.fade3-enter, .fade3-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  transform: translateY(100%);
+.fade3-enter,
+.fade3-leave-to {
+  transform: translateY(-100%);
   opacity: 0;
 }
 
@@ -188,7 +198,8 @@ export default {
   transition: all 0.3s 0.2s;
 }
 
-.fade4-enter, .fade4-leave-to /* .fade-leave-active below version 2.1.8 */ {
+.fade4-enter,
+.fade4-leave-to {
   transform: translateX(100%);
   opacity: 0;
 }

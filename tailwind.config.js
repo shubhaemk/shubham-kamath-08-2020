@@ -47,11 +47,9 @@ module.exports = {
         almostFull: "95%",
         full: "100%",
       },
-      backgroundColor: (theme) => ({
-        ...theme("colors"),
-        primary: "#0f0f1f",
-        secondary: "#12192c",
-      }),
+      backgroundColor: {
+        dark: "#252a34",
+      },
     },
   },
   variants: {},
