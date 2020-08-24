@@ -5,6 +5,9 @@ module.exports = {
       screens: {
         "4k": "2000px",
       },
+      height: {
+        "1/2": "50%",
+      },
       fontSize: {
         "3-5xl": "2rem",
         "4-5xl": "2.5rem",

@@ -1,6 +1,6 @@
 <template>
   <transition name="nav-slide">
-    <nav class="nav-container" v-if="SCROLL_DIRECTION === 'UP'">
+    <nav class="nav-container" :class="{'h-screen' : isMenuOpen}" v-if="SCROLL_DIRECTION === 'UP'">
       <MaxWidthComponent class="nav-container-header">
         <div class="nav-item">
           <span class="angle-bracket" v-html="'<'" />
@@ -19,22 +19,27 @@
           <span class="angle-bracket" v-html="'>'" />
         </div>
       </MaxWidthComponent>
-      <div class="nav-container-menu" v-if="isMenuOpen">
-        <div class="h-screen w-screen flex flex-col-reverse md:flex-row overflow-hidden">
-          <div class="h-full w-full md:h-full md:w-1/2">
-            <transition name="fade4">
-              <div v-if="isMenuOpenDelayed" class="h-full w-full bg-teal-500 -translate-x-full">
-                <p class="text-white text-6xl">FADE 4</p>
-              </div>
-            </transition>
-          </div>
-
-          <div class="h-full w-full flex flex-col relative md:h-full md:w-1/2">
-            <div class="h-auto min-h-1/2 w-full flex">
+      <div class="nav-container-menu w-screen flex flex-col-reverse md:flex-row" v-if="isMenuOpen">
+        <div class="h-full w-full md:h-full md:w-1/2">
+          <transition name="fade4">
+            <div
+              v-if="isMenuOpenDelayed"
+              class="h-full w-full project-bg -translate-x-full flex items-center justify-center"
+            >
+              <p class="text-white text-6xl">Projects</p>
+            </div>
+          </transition>
+        </div>
+        <div class="h-full w-full md:h-full md:w-1/2">
+          <div class="h-full w-full flex flex-col relative md:h-full">
+            <div class="h-1/2 w-full flex">
               <div class="h-full w-1/2 flex flex-col">
                 <transition name="fade2">
-                  <div v-if="isMenuOpenDelayed" class="h-full w-full bg-teal-300 -translate-x-full">
-                    <p class="text-white text-6xl">FADE 2</p>
+                  <div
+                    v-if="isMenuOpenDelayed"
+                    class="h-full w-full blog-bg -translate-x-full flex items-center justify-center"
+                  >
+                    <p class="text-white text-6xl">Blogs</p>
                   </div>
                 </transition>
               </div>
@@ -44,9 +49,9 @@
                   <transition name="fade">
                     <div
                       v-if="isMenuOpenDelayed"
-                      class="h-full w-full -translate-x-full bg-teal-100"
+                      class="h-full w-full -translate-x-full home-bg flex items-center justify-center"
                     >
-                      <p class="text-white text-6xl">FADE 0</p>
+                      <p class="text-white text-6xl">Home</p>
                     </div>
                   </transition>
                 </div>
@@ -54,18 +59,21 @@
                   <transition name="fade1">
                     <div
                       v-if="isMenuOpenDelayed"
-                      class="h-full w-full bg-teal-200 translate-y-full"
+                      class="h-full w-full translate-y-full contact-bg flex items-center justify-center"
                     >
-                      <p class="text-white text-6xl">FADE 1</p>
+                      <p class="text-white text-6xl">Contact</p>
                     </div>
                   </transition>
                 </div>
               </div>
             </div>
-            <div class="h-auto min-h-1/2 w-full">
+            <div class="h-1/2 w-full">
               <transition name="fade3">
-                <div v-if="isMenuOpenDelayed" class="h-full w-full bg-teal-400 -translate-y-full">
-                  <p class="text-white text-6xl">FADE 3</p>
+                <div
+                  v-if="isMenuOpenDelayed"
+                  class="h-full w-full about-bg -translate-y-full flex items-center justify-center"
+                >
+                  <p class="text-white text-6xl">About</p>
                 </div>
               </transition>
             </div>
@@ -202,5 +210,25 @@ export default {
 .fade4-leave-to {
   transform: translateX(100%);
   opacity: 0;
+}
+
+.project-bg {
+  background-color: #08d9d6;
+}
+
+.about-bg {
+  background-color: #252a34;
+}
+
+.blog-bg {
+  background-color: #ff2e63;
+}
+
+.contact-bg {
+  background-color: #eaeaea;
+}
+
+.home-bg {
+  background-color: #08d9d6;
 }
 </style>
