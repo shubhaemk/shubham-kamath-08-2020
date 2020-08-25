@@ -11,10 +11,10 @@
 }
 
 .nav-container-menu {
-  @apply nav-height w-full;
+  @apply nav-menu-height w-full;
 }
 
-.nav-height {
+.nav-menu-height {
   height: calc(100vh - 6rem);
   position: relative;
 }
@@ -76,7 +76,11 @@
 */
 
 .title-text {
-  @apply text-white text-3-5xl ml-1 mr-1 antialiased font-black custom-letter select-none;
+  @apply text-white text-3xl ml-1 mr-1 antialiased custom-letter select-none font-design;
+}
+
+.font-design {
+  font-family: "Major Mono Display", monospace;
 }
 
 @media (min-width: 640px) {

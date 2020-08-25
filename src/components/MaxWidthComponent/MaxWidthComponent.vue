@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full h-auto max-w-almostFull 4k:max-w-1/2">
+  <div class="w-full max-w-almostFull 4k:max-w-1/2">
     <slot></slot>
   </div>
 </template>
@@ -9,3 +9,4 @@ export default {
   name: "MaxWidthComponent",
 };
 </script>
+

@@ -213,22 +213,44 @@ export default {
 }
 
 .project-bg {
-  background-color: #08d9d6;
+  background-color: #fa2e63;
 }
 
 .about-bg {
-  background-color: #252a34;
+  background-color: #0f4c75;
 }
 
 .blog-bg {
-  background-color: #ff2e63;
+  background-color: #848ccf;
 }
 
 .contact-bg {
-  background-color: #eaeaea;
+  background-color: #efe78f;
 }
 
 .home-bg {
   background-color: #08d9d6;
 }
 </style>
+
+/**
+.project-bg {
+  background-color: #6930c3;
+}
+
+.about-bg {
+  background-color: #5390d9;
+}
+
+.blog-bg {
+  background-color: #48bfe3;
+}
+
+.contact-bg {
+  background-color: #64dfdf;
+}
+
+.home-bg {
+  background-color: #80ffdb;
+}
+*/
