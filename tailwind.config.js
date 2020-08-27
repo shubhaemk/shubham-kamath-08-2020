@@ -2,6 +2,9 @@ module.exports = {
   purge: ["./src/**/*.html", "./src/**/*.vue"],
   theme: {
     extend: {
+      fontFamily: {
+        title: "Major Mono Display, monospace",
+      },
       screens: {
         "4k": "2000px",
       },
@@ -52,6 +55,14 @@ module.exports = {
       },
       backgroundColor: {
         dark: "#252a34",
+        "accent-1": "#fa2e63",
+        "accent-2": "#0f4c75",
+        "accent-3": "#848ccf",
+        "accent-4": "#08d9d6",
+        "accent-5": "#efe78f",
+      },
+      letterSpacing: {
+        tightest: "-0.35rem",
       },
     },
   },

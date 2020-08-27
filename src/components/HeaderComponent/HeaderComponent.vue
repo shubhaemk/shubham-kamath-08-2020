@@ -19,60 +19,45 @@
           <span class="angle-bracket" v-html="'>'" />
         </div>
       </MaxWidthComponent>
-      <div class="nav-container-menu w-screen flex flex-col-reverse md:flex-row" v-if="isMenuOpen">
-        <div class="h-full w-full md:h-full md:w-1/2">
-          <transition name="fade4">
-            <div
-              v-if="isMenuOpenDelayed"
-              class="h-full w-full project-bg -translate-x-full flex items-center justify-center"
-            >
+      <div class="menu-container md:menu-container" v-if="isMenuOpen">
+        <div class="menu-container-1-2">
+          <transition name="project-animation">
+            <div v-if="isMenuOpenDelayed" class="project-container md:project-container">
               <p class="text-white text-6xl">Projects</p>
             </div>
           </transition>
         </div>
-        <div class="h-full w-full md:h-full md:w-1/2">
-          <div class="h-full w-full flex flex-col relative md:h-full">
-            <div class="h-1/2 w-full flex">
-              <div class="h-full w-1/2 flex flex-col">
-                <transition name="fade2">
-                  <div
-                    v-if="isMenuOpenDelayed"
-                    class="h-full w-full blog-bg -translate-x-full flex items-center justify-center"
-                  >
+        <div class="menu-container-1-2">
+          <div class="menu-container-1-2-extended md:menu-container-1-2-extended">
+            <div class="menu-container-1-8-extended">
+              <div class="menu-container-1-16">
+                <transition name="blog-animation">
+                  <div v-if="isMenuOpenDelayed" class="blog-container">
                     <p class="text-white text-6xl">Blogs</p>
                   </div>
                 </transition>
               </div>
 
-              <div class="h-full w-1/2 flex flex-col relative">
-                <div class="h-auto min-h-1/2 w-full">
-                  <transition name="fade">
-                    <div
-                      v-if="isMenuOpenDelayed"
-                      class="h-full w-full -translate-x-full home-bg flex items-center justify-center"
-                    >
+              <div class="menu-container-1-16-extended">
+                <div class="menu-container-1-32">
+                  <transition name="home-animation">
+                    <div v-if="isMenuOpenDelayed" class="home-container">
                       <p class="text-white text-6xl">Home</p>
                     </div>
                   </transition>
                 </div>
-                <div class="h-auto min-h-1/2 w-full">
-                  <transition name="fade1">
-                    <div
-                      v-if="isMenuOpenDelayed"
-                      class="h-full w-full translate-y-full contact-bg flex items-center justify-center"
-                    >
+                <div class="menu-container-1-32">
+                  <transition name="contact-animation">
+                    <div v-if="isMenuOpenDelayed" class="contact-container">
                       <p class="text-white text-6xl">Contact</p>
                     </div>
                   </transition>
                 </div>
               </div>
             </div>
-            <div class="h-1/2 w-full">
-              <transition name="fade3">
-                <div
-                  v-if="isMenuOpenDelayed"
-                  class="h-full w-full about-bg -translate-y-full flex items-center justify-center"
-                >
+            <div class="menu-container-1-8">
+              <transition name="about-animation">
+                <div v-if="isMenuOpenDelayed" class="about-container">
                   <p class="text-white text-6xl">About</p>
                 </div>
               </transition>
@@ -143,114 +128,6 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 @import "./HeaderComponent.css";
-
-.fade-enter-active {
-  transition: all 0.3s 0.2s;
-}
-
-.fade-leave-active {
-  transition: all 0.3s 1.3s;
-}
-
-.fade-enter,
-.fade-leave-to {
-  transform: translateX(100%);
-  opacity: 0;
-}
-
-.fade1-enter-active {
-  transition: all 0.3s 0.5s;
-}
-
-.fade1-leave-active {
-  transition: all 0.3s 1s;
-}
-
-.fade1-enter,
-.fade1-leave-to {
-  transform: translateY(-100%);
-  opacity: 0;
-}
-
-.fade2-enter-active,
-.fade2-leave-active {
-  transition: all 0.3s 0.7s;
-}
-.fade2-enter,
-.fade2-leave-to {
-  transform: translateX(100%);
-  opacity: 0;
-}
-
-.fade3-enter-active {
-  transition: all 0.3s 1s;
-}
-
-.fade3-leave-active {
-  transition: all 0.3s 0.5s;
-}
-
-.fade3-enter,
-.fade3-leave-to {
-  transform: translateY(-100%);
-  opacity: 0;
-}
-
-.fade4-enter-active {
-  transition: all 0.3s 1.3s;
-}
-
-.fade4-leave-active {
-  transition: all 0.3s 0.2s;
-}
-
-.fade4-enter,
-.fade4-leave-to {
-  transform: translateX(100%);
-  opacity: 0;
-}
-
-.project-bg {
-  background-color: #fa2e63;
-}
-
-.about-bg {
-  background-color: #0f4c75;
-}
-
-.blog-bg {
-  background-color: #848ccf;
-}
-
-.contact-bg {
-  background-color: #efe78f;
-}
-
-.home-bg {
-  background-color: #08d9d6;
-}
 </style>
-
-/**
-.project-bg {
-  background-color: #6930c3;
-}
-
-.about-bg {
-  background-color: #5390d9;
-}
-
-.blog-bg {
-  background-color: #48bfe3;
-}
-
-.contact-bg {
-  background-color: #64dfdf;
-}
-
-.home-bg {
-  background-color: #80ffdb;
-}
-*/
