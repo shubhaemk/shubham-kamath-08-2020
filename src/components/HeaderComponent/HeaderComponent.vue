@@ -21,6 +21,12 @@
       </MaxWidthComponent>
       <div class="menu-container md:menu-container" v-if="isMenuOpen">
         <div class="menu-container-1-2">
+          <transition name="project-cover-animation">
+            <div
+              v-if="isMenuOpenDelayed"
+              class="project-container md:project-container absolute top-0 z-negative-10 bg-black"
+            />
+          </transition>
           <transition name="project-animation">
             <div v-if="isMenuOpenDelayed" class="project-container md:project-container">
               <p class="text-white text-6xl">Projects</p>
@@ -31,6 +37,12 @@
           <div class="menu-container-1-2-extended md:menu-container-1-2-extended">
             <div class="menu-container-1-8-extended">
               <div class="menu-container-1-16">
+                <transition name="blog-cover-animation">
+                  <div
+                    v-if="isMenuOpenDelayed"
+                    class="blog-container absolute top-0 z-negative-10 bg-black"
+                  />
+                </transition>
                 <transition name="blog-animation">
                   <div v-if="isMenuOpenDelayed" class="blog-container">
                     <p class="text-white text-6xl">Blogs</p>
@@ -40,6 +52,12 @@
 
               <div class="menu-container-1-16-extended">
                 <div class="menu-container-1-32">
+                  <transition name="home-cover-animation">
+                    <div
+                      v-if="isMenuOpenDelayed"
+                      class="home-container absolute top-0 z-negative-10 bg-black"
+                    />
+                  </transition>
                   <transition name="home-animation">
                     <div v-if="isMenuOpenDelayed" class="home-container">
                       <p class="text-white text-6xl">Home</p>
@@ -47,6 +65,12 @@
                   </transition>
                 </div>
                 <div class="menu-container-1-32">
+                  <transition name="contact-cover-animation">
+                    <div
+                      v-if="isMenuOpenDelayed"
+                      class="contact-container absolute top-0 z-negative-10 bg-black"
+                    />
+                  </transition>
                   <transition name="contact-animation">
                     <div v-if="isMenuOpenDelayed" class="contact-container">
                       <p class="text-white text-6xl">Contact</p>
@@ -56,6 +80,12 @@
               </div>
             </div>
             <div class="menu-container-1-8">
+              <transition name="about-cover-animation">
+                <div
+                  v-if="isMenuOpenDelayed"
+                  class="about-container absolute top-0 z-negative-10 bg-black"
+                />
+              </transition>
               <transition name="about-animation">
                 <div v-if="isMenuOpenDelayed" class="about-container">
                   <p class="text-white text-6xl">About</p>
@@ -97,7 +127,7 @@ export default {
         setTimeout(() => {
           this.isClickable = true;
           this.$emit("toggle-menu");
-        }, 1500);
+        }, 2300);
       }
     },
   },

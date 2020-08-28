@@ -64,6 +64,9 @@ module.exports = {
       letterSpacing: {
         tightest: "-0.35rem",
       },
+      zIndex: {
+        "negative-10": "-10",
+      },
     },
   },
   variants: {},
