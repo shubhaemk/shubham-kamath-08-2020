@@ -4,6 +4,7 @@ module.exports = {
     extend: {
       fontFamily: {
         title: "Major Mono Display, monospace",
+        regular: "Roboto Mono, monospace",
       },
       screens: {
         "4k": "2000px",
@@ -54,12 +55,19 @@ module.exports = {
         full: "100%",
       },
       backgroundColor: {
-        dark: "#252a34",
-        "accent-1": "#fa2e63",
-        "accent-2": "#0f4c75",
-        "accent-3": "#848ccf",
-        "accent-4": "#08d9d6",
-        "accent-5": "#efe78f",
+        dark: "#12191F",
+        home: "#08d9d6",
+        contact: "#efe78f",
+        blog: "#848ccf",
+        about: "#0f4c75",
+        project: "#fa2e63",
+      },
+      textColor: {
+        home: "#08d9d6",
+        contact: "#efe78f",
+        blog: "#848ccf",
+        about: "#0f4c75",
+        project: "#fa2e63",
       },
       letterSpacing: {
         tightest: "-0.35rem",

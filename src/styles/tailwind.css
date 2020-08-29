@@ -5,5 +5,5 @@
 * {
   box-sizing: border-box;
   font-size: 10px;
-  @apply font-mono;
+  @apply font-regular;
 }

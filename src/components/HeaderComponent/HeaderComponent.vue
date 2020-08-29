@@ -1,9 +1,9 @@
 <template>
   <transition name="nav-slide">
     <nav class="nav-container" :class="{'h-screen' : isMenuOpen}" v-if="SCROLL_DIRECTION === 'UP'">
-      <MaxWidthComponent class="nav-container-header">
+      <div class="nav-container-header 4k:nav-container-header">
         <div class="nav-item">
-          <span class="angle-bracket" v-html="'<'" />
+          <span class="angle-bracket origin-center" v-html="'<'" />
           <span
             class="title-text md:title-text lg:title-text xl:title-text 4k:title-text"
           >{{ titleText }}</span>
@@ -18,7 +18,7 @@
           <span class="front-slash" v-html="'/'" />
           <span class="angle-bracket" v-html="'>'" />
         </div>
-      </MaxWidthComponent>
+      </div>
       <div class="menu-container md:menu-container" v-if="isMenuOpen">
         <div class="menu-container-1-2">
           <transition name="project-cover-animation">
@@ -100,16 +100,13 @@
 </template>
 
 <script>
-import MaxWidthComponent from "../MaxWidthComponent/MaxWidthComponent";
 import { mapState } from "vuex";
 
 const TITLE_TEXT = "SK";
 
 export default {
   name: "HeaderComponent",
-  components: {
-    MaxWidthComponent,
-  },
+
   methods: {
     toggleMenu: function () {
       if (!this.isClickable) return;
@@ -127,7 +124,7 @@ export default {
         setTimeout(() => {
           this.isClickable = true;
           this.$emit("toggle-menu");
-        }, 2300);
+        }, 2500);
       }
     },
   },

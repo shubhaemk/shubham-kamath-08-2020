@@ -1,14 +1,14 @@
 <template>
   <div class="flex flex-initial justify-center items-center flex-col w-screen h-auto bg-dark">
     <HeaderComponent :isMenuOpen="isMenuOpen" :menuText="menuText" @toggle-menu="toggleMenu" />
-    <MaxWidthComponent v-scroll-lock="isMenuOpen">
+    <div class="w-full max-w-almostFull md:max-w-3/4 4k:max-w-1/2" v-scroll-lock="isMenuOpen">
       <HomeContainer>
         <h1 style="padding-top: 200px; font-size: 20px; color: white;">{{ SCROLL_POSITION }}</h1>
       </HomeContainer>
       <HomeContainer>
         <h1 style="padding-top: 200px; font-size: 20px; color: white;">{{ SCROLL_POSITION }}</h1>
       </HomeContainer>
-    </MaxWidthComponent>
+    </div>
   </div>
 </template>
 <script>
@@ -16,7 +16,6 @@ import { mapState } from "vuex";
 
 import HomeContainer from "../containers/HomeContainer";
 import HeaderComponent from "../components/HeaderComponent/HeaderComponent";
-import MaxWidthComponent from "../components/MaxWidthComponent/MaxWidthComponent";
 
 const MENU_TEXT = "MENU";
 const OTHER_MENU_TEXT = "BACK";
@@ -26,7 +25,6 @@ export default {
   components: {
     HomeContainer,
     HeaderComponent,
-    MaxWidthComponent,
   },
   created: function () {
     window.addEventListener(
