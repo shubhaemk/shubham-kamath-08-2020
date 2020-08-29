@@ -1,13 +1,18 @@
 <template>
-  <div class="flex flex-initial justify-center items-center flex-col w-screen h-auto bg-dark">
-    <HeaderComponent :isMenuOpen="isMenuOpen" :menuText="menuText" @toggle-menu="toggleMenu" />
-    <div class="w-full max-w-almostFull md:max-w-3/4 4k:max-w-1/2" v-scroll-lock="isMenuOpen">
-      <HomeContainer>
-        <h1 style="padding-top: 200px; font-size: 20px; color: white;">{{ SCROLL_POSITION }}</h1>
-      </HomeContainer>
-      <HomeContainer>
-        <h1 style="padding-top: 200px; font-size: 20px; color: white;">{{ SCROLL_POSITION }}</h1>
-      </HomeContainer>
+  <div
+    class="flex flex-initial justify-center items-center flex-col w-screen h-auto bg-dark"
+  >
+    <HeaderComponent
+      :isMenuOpen="isMenuOpen"
+      :menuText="menuText"
+      @toggle-menu="toggleMenu"
+    />
+    <div
+      class="w-full max-w-almostFull md:max-w-3/4 lg:max-w-landing 4k:max-w-1/2"
+      v-scroll-lock="isMenuOpen"
+    >
+      <HomeContainer />
+      <HomeContainer />
     </div>
   </div>
 </template>
@@ -26,7 +31,7 @@ export default {
     HomeContainer,
     HeaderComponent,
   },
-  created: function () {
+  created: function() {
     window.addEventListener(
       "scroll",
       () => {
@@ -48,28 +53,27 @@ export default {
     ...mapState({
       SCROLL_POSITION: (state) => state.appBehavior.SCROLL_POSITION,
     }),
-    isMenuOpen: function () {
+    isMenuOpen: function() {
       return this.menuText === OTHER_MENU_TEXT;
     },
   },
-  data: function () {
+  data: function() {
     return {
       menuText: MENU_TEXT,
     };
   },
   methods: {
-    setScrollDirection: function (direction) {
+    setScrollDirection: function(direction) {
       this.$store.dispatch("appBehavior/setScrollDirection", direction);
     },
-    setScrollPosition: function (position) {
+    setScrollPosition: function(position) {
       this.$store.dispatch("appBehavior/setScrollPosition", position);
     },
-    toggleMenu: function () {
+    toggleMenu: function() {
       this.menuText = this.menuText === MENU_TEXT ? OTHER_MENU_TEXT : MENU_TEXT;
     },
   },
 };
 </script>
 
-<style>
-</style>
+<style></style>

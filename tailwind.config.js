@@ -40,6 +40,7 @@ module.exports = {
         "0": "0",
         "1/4": "25%",
         "1/2": "50%",
+        landing: "65%",
         "3/4": "75%",
         almost: "85%",
         almostFull: "90%",
@@ -71,6 +72,7 @@ module.exports = {
       },
       letterSpacing: {
         tightest: "-0.35rem",
+        mobile: "-0.2rem",
       },
       zIndex: {
         "negative-10": "-10",
