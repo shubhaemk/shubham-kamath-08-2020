@@ -12,15 +12,23 @@
       v-scroll-lock="isMenuOpen"
     >
       <HomeContainer />
-      <HomeContainer />
+      <ProjectContainer />
+      <BlogContainer />
+      <AboutContainer />
+      <ContactContainer />
     </div>
   </div>
 </template>
 <script>
 import { mapState } from "vuex";
 
-import HomeContainer from "../containers/HomeContainer";
 import HeaderComponent from "../components/HeaderComponent/HeaderComponent";
+
+import HomeContainer from "../containers/HomeContainer/HomeContainer";
+import ProjectContainer from "../containers/ProjectContainer/ProjectContainer";
+import BlogContainer from "../containers/BlogContainer/BlogContainer";
+import AboutContainer from "../containers/AboutContainer/AboutContainer";
+import ContactContainer from "../containers/ContactContainer/ContactContainer";
 
 const MENU_TEXT = "MENU";
 const OTHER_MENU_TEXT = "BACK";
@@ -30,6 +38,10 @@ export default {
   components: {
     HomeContainer,
     HeaderComponent,
+    ProjectContainer,
+    BlogContainer,
+    AboutContainer,
+    ContactContainer,
   },
   created: function() {
     window.addEventListener(
