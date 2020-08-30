@@ -1,6 +1,6 @@
 <template>
   <transition name="nav-slide">
-    <nav class="nav-container" v-if="SCROLL_DIRECTION === 'UP'">
+    <nav class="nav-container" v-show="SCROLL_DIRECTION === 'UP'">
       <div class="nav-container-header 4k:nav-container-header">
         <div class="nav-item">
           <span class="angle-bracket origin-center" v-html="'<'" />
@@ -21,7 +21,7 @@
           <span class="angle-bracket" v-html="'>'" />
         </div>
       </div>
-      <div class="menu-container md:menu-container top" v-if="isMenuOpen">
+      <div class="menu-container md:menu-container top" v-show="isMenuOpen">
         <div class="menu-container-1-2">
           <transition name="project-cover-animation">
             <div
