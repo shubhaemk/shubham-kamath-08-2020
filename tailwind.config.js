@@ -11,6 +11,7 @@ module.exports = {
       },
       height: {
         "1/2": "50%",
+        "70per": "70%",
       },
       fontSize: {
         "3-5xl": "2rem",
@@ -39,8 +40,9 @@ module.exports = {
       maxWidth: {
         "0": "0",
         "1/4": "25%",
+        "fourk-landing": "35%",
         "1/2": "50%",
-        landing: "65%",
+        "lg-landing": "65%",
         "3/4": "75%",
         almost: "85%",
         almostFull: "90%",
