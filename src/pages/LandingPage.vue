@@ -25,7 +25,7 @@ export default {
       () => {
         const scrolledTo =
           window.pageYOffset || document.documentElement.scrollTop;
-        if (scrolledTo > 60 && scrolledTo > this.SCROLL_POSITION) {
+        if (scrolledTo > 110 && scrolledTo > this.SCROLL_POSITION) {
           this.setScrollDirection("DOWN");
         } else {
           this.setScrollDirection("UP");
