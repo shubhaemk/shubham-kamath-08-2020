@@ -2,8 +2,9 @@
   <div
     class="feed-container md:feed-container lg:feed-container fourk:feed-container"
     v-scroll-lock="isMenuOpen"
+    ref="feedContainer"
   >
-    <HomeContainer />
+    <HomeContainer :observer="observer" />
     <ProjectContainer />
     <BlogContainer />
     <AboutContainer />
@@ -31,6 +32,26 @@ export default {
     isMenuOpen: {
       type: Boolean,
       required: true,
+    },
+  },
+  data: function () {
+    return {
+      observer: null,
+    };
+  },
+
+  created: function () {
+    this.observer = new IntersectionObserver(this.onElementObserved, {
+      root: this.$refs.feedContainer,
+      threshold: 0.7,
+    });
+  },
+  methods: {
+    onElementObserved(entries) {
+      entries.forEach(({ target, isIntersecting }) => {
+        console.log(target);
+        console.log(isIntersecting);
+      });
     },
   },
 };
