@@ -10,12 +10,12 @@
 
 @media (min-width: 1024px) {
   .lg\:feed-container {
-    @apply max-w-landing;
+    @apply max-w-lg-landing;
   }
 }
 
 @media (min-width: 2000px) {
   .fourk\:feed-container {
-    @apply max-w-1/2;
+    @apply max-w-fourk-landing;
   }
 }
