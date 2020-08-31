@@ -1,27 +1,25 @@
 <template>
   <transition name="nav-slide">
     <nav class="nav-container" v-show="SCROLL_DIRECTION === 'UP'">
-      <div class="nav-container-header 4k:nav-container-header">
+      <div class="nav-container-header fourk:nav-container-header">
         <div class="nav-item">
           <span class="angle-bracket origin-center" v-html="'<'" />
           <span
-            class="title-text md:title-text lg:title-text xl:title-text 4k:title-text"
-            >{{ titleText }}</span
-          >
+            class="title-text md:title-text lg:title-text xl:title-text fourk:title-text"
+          >{{ titleText }}</span>
           <span class="front-slash" v-html="'/'" />
           <span class="angle-bracket" v-html="'>'" />
         </div>
         <div class="nav-item" @click="toggleMenu">
           <span class="angle-bracket" v-html="'<'" />
           <span
-            class="title-text md:title-text lg:title-text xl:title-text 4k:title-text"
-            >{{ menuText }}</span
-          >
+            class="title-text md:title-text lg:title-text xl:title-text fourk:title-text"
+          >{{ menuText }}</span>
           <span class="front-slash" v-html="'/'" />
           <span class="angle-bracket" v-html="'>'" />
         </div>
       </div>
-      <div class="menu-container md:menu-container top" v-show="isMenuOpen">
+      <div class="menu-container md:menu-container" v-show="isMenuOpen">
         <div class="menu-container-1-2">
           <transition name="project-cover-animation">
             <div
@@ -30,18 +28,13 @@
             />
           </transition>
           <transition name="project-animation">
-            <div
-              v-if="isMenuOpenDelayed"
-              class="project-container md:project-container"
-            >
+            <div v-if="isMenuOpenDelayed" class="project-container md:project-container">
               <p class="text-white text-6xl">Projects</p>
             </div>
           </transition>
         </div>
         <div class="menu-container-1-2">
-          <div
-            class="menu-container-1-2-extended md:menu-container-1-2-extended"
-          >
+          <div class="menu-container-1-2-extended md:menu-container-1-2-extended">
             <div class="menu-container-1-8-extended">
               <div class="menu-container-1-16">
                 <transition name="blog-cover-animation">
@@ -115,7 +108,7 @@ export default {
   name: "HeaderComponent",
 
   methods: {
-    toggleMenu: function() {
+    toggleMenu: function () {
       if (!this.isClickable) return;
 
       this.isClickable = false;
@@ -142,7 +135,7 @@ export default {
     }),
   },
 
-  data: function() {
+  data: function () {
     return {
       isClickable: true,
       isMenuOpenDelayed: false,

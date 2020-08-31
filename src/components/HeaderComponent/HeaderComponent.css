@@ -10,12 +10,6 @@
   @apply w-full max-w-almostFull flex justify-between items-center flex-wrap self-center h-24;
 }
 
-@media (min-width: 2000px) {
-  4k\:nav-container-header {
-    @apply max-w-1/2;
-  }
-}
-
 /*
   Navigation Container Animation
 */
@@ -76,30 +70,6 @@
   @apply text-white font-title text-4xl ml-1 mr-1 antialiased tracking-mobile select-none;
 }
 
-@media (min-width: 640px) {
-  .md\:title-text {
-    @apply text-4-5xl;
-  }
-}
-
-@media (min-width: 1024px) {
-  .lg\:title-text {
-    @apply text-5-5xl tracking-tightest;
-  }
-}
-
-@media (min-width: 1280px) {
-  .xl\:title-text {
-    @apply text-6xl;
-  }
-}
-
-@media (min-width: 2000px) {
-  .4k\:title-text {
-    @apply text-6xl;
-  }
-}
-
 /*
   Bracket Animations
 */
@@ -156,12 +126,6 @@
   @apply nav-menu-height w-screen flex flex-col-reverse absolute top-24;
 }
 
-@media (min-width: 640px) {
-  .md\:menu-container {
-    @apply flex-row;
-  }
-}
-
 .menu-container-1-2 {
   @apply h-full w-full relative;
 }
@@ -188,16 +152,6 @@
 
 .menu-container-1-32 {
   @apply h-auto min-h-1/2 w-full relative;
-}
-
-@media (min-width: 640px) {
-  .md\:menu-container-1-2 {
-    @apply h-full w-1/2;
-  }
-
-  .md\:menu-container-1-2-extended {
-    @apply h-full;
-  }
 }
 
 /*
@@ -344,16 +298,6 @@
   opacity: 0;
 }
 
-@media (min-width: 640px) {
-  .project-cover-animation-enter,
-  .project-cover-animation-leave-to,
-  .project-animation-enter,
-  .project-animation-leave-to {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-}
-
 .project-container {
   @apply h-full w-full bg-project translate-y-full flex items-center justify-center;
 }
@@ -375,7 +319,53 @@
 }
 
 @media (min-width: 640px) {
+  .md\:title-text {
+    @apply text-4-5xl;
+  }
+
+  .md\:menu-container {
+    @apply flex-row;
+  }
+
+  .md\:menu-container-1-2 {
+    @apply h-full w-1/2;
+  }
+
+  .md\:menu-container-1-2-extended {
+    @apply h-full;
+  }
+
+  .project-cover-animation-enter,
+  .project-cover-animation-leave-to,
+  .project-animation-enter,
+  .project-animation-leave-to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
   .md\:project-container {
     @apply -translate-x-full;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:title-text {
+    @apply text-5-5xl tracking-tightest;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:title-text {
+    @apply text-6xl;
+  }
+}
+
+@media (min-width: 2000px) {
+  .fourk\:nav-container-header {
+    @apply max-w-1/2;
+  }
+
+  .fourk\:title-text {
+    @apply text-6xl;
   }
 }

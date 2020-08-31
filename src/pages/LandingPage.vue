@@ -1,34 +1,14 @@
 <template>
-  <div
-    class="flex flex-initial justify-center items-center flex-col w-screen h-auto bg-dark"
-  >
-    <HeaderComponent
-      :isMenuOpen="isMenuOpen"
-      :menuText="menuText"
-      @toggle-menu="toggleMenu"
-    />
-    <div
-      class="w-full max-w-almostFull md:max-w-3/4 lg:max-w-landing 4k:max-w-1/2"
-      v-scroll-lock="isMenuOpen"
-    >
-      <HomeContainer />
-      <ProjectContainer />
-      <BlogContainer />
-      <AboutContainer />
-      <ContactContainer />
-    </div>
+  <div class="flex flex-initial justify-center items-center flex-col w-screen h-auto bg-dark">
+    <HeaderComponent :isMenuOpen="isMenuOpen" :menuText="menuText" @toggle-menu="toggleMenu" />
+    <FeedComponent :isMenuOpen="isMenuOpen" />
   </div>
 </template>
 <script>
 import { mapState } from "vuex";
 
 import HeaderComponent from "../components/HeaderComponent/HeaderComponent";
-
-import HomeContainer from "../containers/HomeContainer/HomeContainer";
-import ProjectContainer from "../containers/ProjectContainer/ProjectContainer";
-import BlogContainer from "../containers/BlogContainer/BlogContainer";
-import AboutContainer from "../containers/AboutContainer/AboutContainer";
-import ContactContainer from "../containers/ContactContainer/ContactContainer";
+import FeedComponent from "../components/FeedComponent/FeedComponent";
 
 const MENU_TEXT = "MENU";
 const OTHER_MENU_TEXT = "BACK";
@@ -36,14 +16,10 @@ const OTHER_MENU_TEXT = "BACK";
 export default {
   name: "LandingPage",
   components: {
-    HomeContainer,
     HeaderComponent,
-    ProjectContainer,
-    BlogContainer,
-    AboutContainer,
-    ContactContainer,
+    FeedComponent,
   },
-  created: function() {
+  created: function () {
     window.addEventListener(
       "scroll",
       () => {
@@ -65,23 +41,23 @@ export default {
     ...mapState({
       SCROLL_POSITION: (state) => state.appBehavior.SCROLL_POSITION,
     }),
-    isMenuOpen: function() {
+    isMenuOpen: function () {
       return this.menuText === OTHER_MENU_TEXT;
     },
   },
-  data: function() {
+  data: function () {
     return {
       menuText: MENU_TEXT,
     };
   },
   methods: {
-    setScrollDirection: function(direction) {
+    setScrollDirection: function (direction) {
       this.$store.dispatch("appBehavior/setScrollDirection", direction);
     },
-    setScrollPosition: function(position) {
+    setScrollPosition: function (position) {
       this.$store.dispatch("appBehavior/setScrollPosition", position);
     },
-    toggleMenu: function() {
+    toggleMenu: function () {
       this.menuText = this.menuText === MENU_TEXT ? OTHER_MENU_TEXT : MENU_TEXT;
     },
   },

@@ -7,7 +7,7 @@ module.exports = {
         regular: "Roboto Mono, monospace",
       },
       screens: {
-        "4k": "2000px",
+        fourk: "2000px",
       },
       height: {
         "1/2": "50%",

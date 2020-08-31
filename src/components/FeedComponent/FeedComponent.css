@@ -1,0 +1,21 @@
+.feed-container {
+  @apply w-full max-w-almostFull;
+}
+
+@media (min-width: 768px) {
+  .md\:feed-container {
+    @apply max-w-3/4;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:feed-container {
+    @apply max-w-landing;
+  }
+}
+
+@media (min-width: 2000px) {
+  .fourk\:feed-container {
+    @apply max-w-1/2;
+  }
+}
