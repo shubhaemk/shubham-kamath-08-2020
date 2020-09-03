@@ -61,7 +61,6 @@ export default {
 
         const screenName = target.getAttribute("screen-name");
         this.setScreenName(screenName);
-        console.log({ screenName });
       });
     },
   },
