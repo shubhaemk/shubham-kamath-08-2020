@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen min-h-50 relative">
+  <div class="h-screen min-h-50 relative" :screen-name="screenName">
     <div class="h-70per absolute left-0 bottom-0">
       <div class="w-1 h-full bg-home" />
     </div>
@@ -13,6 +13,10 @@ export default {
   },
 
   props: {
+    screenName: {
+      type: String,
+      required: true,
+    },
     observer: {
       type: IntersectionObserver,
       required: true,

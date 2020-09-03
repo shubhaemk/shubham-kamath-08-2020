@@ -4,11 +4,11 @@
     v-scroll-lock="isMenuOpen"
     ref="feedContainer"
   >
-    <HomeContainer :observer="observer" />
-    <ProjectContainer />
-    <BlogContainer />
-    <AboutContainer />
-    <ContactContainer />
+    <HomeContainer :observer="observer" screenName="HOME" />
+    <ProjectContainer :observer="observer" screenName="PROJECT" />
+    <BlogContainer :observer="observer" screenName="BLOG" />
+    <AboutContainer :observer="observer" screenName="ABOUT" />
+    <ContactContainer :observer="observer" screenName="CONTACT" />
   </div>
 </template>
 
@@ -46,11 +46,22 @@ export default {
       threshold: 0.7,
     });
   },
+  beforeDestroy: function () {
+    this.observer.disconnect();
+  },
   methods: {
+    setScreenName: function (screenName) {
+      this.$store.dispatch("appBehavior/setScreenName", screenName);
+    },
     onElementObserved(entries) {
       entries.forEach(({ target, isIntersecting }) => {
-        console.log(target);
-        console.log(isIntersecting);
+        if (!isIntersecting) return;
+
+        this.observer.unobserve(target);
+
+        const screenName = target.getAttribute("screen-name");
+        this.setScreenName(screenName);
+        console.log({ screenName });
       });
     },
   },
