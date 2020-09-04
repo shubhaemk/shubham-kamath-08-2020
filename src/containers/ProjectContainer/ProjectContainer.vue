@@ -49,6 +49,6 @@ export default {
 
 <style>
 .local {
-  transition: background-color 0.5s 0.4s;
+  transition: background-color 0.5s 0.1s;
 }
 </style>
