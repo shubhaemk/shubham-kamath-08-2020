@@ -17,6 +17,7 @@ module.exports = {
         "3-5xl": "2rem",
         "4-5xl": "2.5rem",
         "5-5xl": "3.2rem",
+        "7xl": "5rem",
       },
       minWidth: {
         "0": "0",
