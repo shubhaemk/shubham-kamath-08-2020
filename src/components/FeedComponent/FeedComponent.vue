@@ -43,7 +43,7 @@ export default {
   created: function () {
     this.observer = new IntersectionObserver(this.onElementObserved, {
       root: this.$refs.feedContainer,
-      threshold: 0.7,
+      threshold: 0.3,
     });
   },
   beforeDestroy: function () {
