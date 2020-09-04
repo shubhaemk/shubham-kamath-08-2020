@@ -51,7 +51,7 @@
   Title Angle Bracket styles
 */
 .angle-bracket {
-  @apply text-home text-3-5xl font-semibold antialiased select-none;
+  @apply text-home font-title text-3-5xl font-semibold antialiased select-none;
 }
 
 /*
@@ -59,7 +59,7 @@
 */
 
 .front-slash {
-  @apply text-home text-3-5xl font-semibold antialiased select-none;
+  @apply text-home font-title text-3-5xl font-semibold antialiased select-none;
 }
 
 /*
@@ -67,7 +67,7 @@
 */
 
 .title-text {
-  @apply text-white font-title text-4xl ml-1 mr-1 antialiased tracking-mobile select-none;
+  @apply text-white font-title text-4xl ml-2 mr-2 antialiased tracking-mobile select-none;
 }
 
 /*
@@ -87,16 +87,8 @@
     transform: rotateX(0deg);
   }
 
-  25% {
-    transform: rotateX(90deg);
-  }
-
   50% {
-    transform: rotateX(180deg);
-  }
-
-  75% {
-    transform: rotateX(90deg);
+    transform: rotateX(3.142rad);
   }
 
   100% {
