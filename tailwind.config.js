@@ -2,6 +2,9 @@ module.exports = {
   purge: ["./src/**/*.html", "./src/**/*.vue"],
   theme: {
     extend: {
+      inset: {
+        "30per": "30%",
+      },
       fontFamily: {
         title: "Major Mono Display, monospace",
         regular: "Roboto Mono, monospace",
@@ -12,6 +15,9 @@ module.exports = {
       height: {
         "1/2": "50%",
         "70per": "70%",
+      },
+      width: {
+        "fit-content": "fit-content",
       },
       fontSize: {
         "3-5xl": "2rem",

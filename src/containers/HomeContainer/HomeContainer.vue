@@ -1,12 +1,17 @@
 <template>
   <div class="h-screen min-h-50 relative" :screen-name="screenName">
-    <div class="h-70per absolute left-0 bottom-0">
-      <div class="w-1 h-full bg-home relative">
-        <div
-          class="absolute top-0 left-0 ml-1 weedth flex justify-center items-center py-12 bg-home"
-        >
-          <p class="text-7xl text-white">Hi</p>
-        </div>
+    <div class="h-full w-full relative">
+      <span class="absolute left-0 bottom-0 h-70per w-1 bg-home" />
+      <div class="absolute left-1 top-30per flex flex-col w-full">
+        <span class="px-20 py-10 w-fit-content bg-home text-6xl text-white font-hairline">Hi</span>
+        <span class="px-20 py-10 text-6xl text-white">
+          <span class="text-6xl text-white mr-5 font-hairline">I'm</span>
+          <span class="text-6xl text-white mr-5 text-home font-medium">Shubham Kamath</span>
+          <span class="text-6xl text-white font-hairline">,</span>
+        </span>
+        <span
+          class="px-20 py-10 text-6xl text-white font-hairline"
+        >A Software Engineer and a hobbyist Photographer from Pune.</span>
       </div>
     </div>
   </div>
