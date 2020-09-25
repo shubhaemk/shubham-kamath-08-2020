@@ -4,6 +4,7 @@ module.exports = {
     extend: {
       inset: {
         "30per": "30%",
+        "1": "0.5rem",
       },
       fontFamily: {
         title: "Major Mono Display, monospace",

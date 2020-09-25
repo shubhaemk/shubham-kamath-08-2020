@@ -1,6 +1,6 @@
 <template>
   <div class="h-screen min-h-50 relative" :screen-name="screenName">
-    <div class="h-full w-full bg-project"></div>
+    <div class="h-full w-full relative"></div>
   </div>
 </template>
 <script>
