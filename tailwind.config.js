@@ -3,6 +3,7 @@ module.exports = {
   theme: {
     extend: {
       inset: {
+        "15per": "15%",
         "30per": "30%",
         "1": "0.5rem",
       },

@@ -9,12 +9,12 @@
           <span class="text-6xl text-white mr-5 text-home font-medium">Shubham Kamath</span>
           <span class="text-6xl text-white font-hairline">,</span>
         </span>
-        <span class="px-20 py-10">
-          <span class="text-6xl text-white mr-5 font-hairline">A</span>
-          <span class="text-6xl text-white mr-5 font-hairline">Software Engineer</span>
-          <span class="text-6xl text-white mr-5 font-hairline">and a hobbyist</span>
-          <span class="text-6xl text-white mr-5 font-hairline">Photographer</span>
-          <span class="text-6xl text-white mr-5 font-hairline">from Pune.</span>
+        <span class="px-20 py-5">
+          <span class="text-4-5xl text-gray-300 mr-5 font-hairline">A</span>
+          <span class="text-4-5xl text-gray-300 mr-5 font-hairline">Software Engineer</span>
+          <span class="text-4-5xl text-gray-300 mr-5 font-hairline">and a hobbyist</span>
+          <span class="text-4-5xl text-gray-300 mr-5 font-hairline">Photographer</span>
+          <span class="text-4-5xl text-gray-300 mr-5 font-hairline">from Pune.</span>
         </span>
       </div>
     </div>
