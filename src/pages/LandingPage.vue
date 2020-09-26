@@ -1,6 +1,12 @@
 <template>
-  <div class="flex flex-initial justify-center items-center flex-col w-screen h-auto bg-dark">
-    <HeaderComponent :isMenuOpen="isMenuOpen" :menuText="menuText" @toggle-menu="toggleMenu" />
+  <div
+    class="flex flex-initial justify-center items-center flex-col w-screen h-auto bg-dark"
+  >
+    <HeaderComponent
+      :isMenuOpen="isMenuOpen"
+      :menuText="menuText"
+      @toggle-menu="toggleMenu"
+    />
     <FeedComponent :isMenuOpen="isMenuOpen" />
   </div>
 </template>

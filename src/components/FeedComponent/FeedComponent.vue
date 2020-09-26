@@ -6,6 +6,7 @@
   >
     <HomeContainer :observer="observer" screenName="HOME" />
     <ProjectContainer :observer="observer" screenName="PROJECT" />
+    <ProjectDisplayContainer :observer="observer" screenName="PROJECT" />
     <BlogContainer :observer="observer" screenName="BLOG" />
     <AboutContainer :observer="observer" screenName="ABOUT" />
     <ContactContainer :observer="observer" screenName="CONTACT" />
@@ -15,6 +16,7 @@
 <script>
 import HomeContainer from "../../containers/HomeContainer/HomeContainer";
 import ProjectContainer from "../../containers/ProjectContainer/ProjectContainer";
+import ProjectDisplayContainer from "../../containers/ProjectDisplayContainer/ProjectDisplayContainer";
 import BlogContainer from "../../containers/BlogContainer/BlogContainer";
 import AboutContainer from "../../containers/AboutContainer/AboutContainer";
 import ContactContainer from "../../containers/ContactContainer/ContactContainer";
@@ -24,6 +26,7 @@ export default {
   components: {
     HomeContainer,
     ProjectContainer,
+    ProjectDisplayContainer,
     BlogContainer,
     AboutContainer,
     ContactContainer,

@@ -3,6 +3,7 @@ module.exports = {
   theme: {
     extend: {
       inset: {
+        "neg-15per": "-15%",
         "15per": "15%",
         "30per": "30%",
         "1": "0.5rem",
@@ -17,9 +18,14 @@ module.exports = {
       height: {
         "1/2": "50%",
         "70per": "70%",
+        "90per": "90%",
+        "30vh": "30vh",
+        "50vh": "50vh",
       },
       width: {
         "fit-content": "fit-content",
+        "45per": "45%",
+        "90per": "90%",
       },
       fontSize: {
         "3-5xl": "2rem",
@@ -45,6 +51,7 @@ module.exports = {
         almostFull: "90%",
         full: "100%",
         "50": "50rem",
+        "100vh": "100vh",
       },
       maxWidth: {
         "0": "0",
