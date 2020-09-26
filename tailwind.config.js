@@ -87,6 +87,7 @@ module.exports = {
         blog: "#848ccf",
         about: "#0f4c75",
         project: "#fa2e63",
+        "background-dark": "#12191F",
       },
       letterSpacing: {
         tightest: "-0.35rem",
