@@ -17,8 +17,21 @@
             <span class="text-5xl font-semibold text-white text-left">00</span>
           </div>
 
-          <span class="text-2xl font-medium text-gray-400 mb-5 text-left"
+          <span class="text-3xl font-hairline text-white mb-5 text-left"
             >Generate GitHub Profile Cards, and download it to share.</span
+          >
+          <span class="text-3xl font-hairline text-white mb-5 text-left"
+            >Built using
+            <span class="text-3xl font-normal text-white mb-5 text-left"
+              >React</span
+            >,
+            <span class="text-3xl font-normal text-white mb-5 text-left"
+              >Redux</span
+            >
+            and
+            <span class="text-3xl font-normal text-white mb-5 text-left"
+              >Bulma CSS</span
+            >.</span
           >
         </div>
       </div>
