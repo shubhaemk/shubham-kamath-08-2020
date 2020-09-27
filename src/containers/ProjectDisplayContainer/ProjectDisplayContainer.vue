@@ -2,9 +2,7 @@
   <div class="h-full min-h-50 relative" :screen-name="screenName">
     <span class="absolute left-0 bottom-0 h-full w-2 bg-project" />
     <div class="px-20 flex flex-col">
-      <div
-        class="w-full h-50vh fourk:h-30vh fourk:h-30vh -mt-20 flex mb-20 relative"
-      >
+      <div class="w-full h-50vh fourk:h-30vh -mt-20 flex mb-20 relative">
         <div class="absolute top-0 px-8 py-5 bg-project w-1/2 bg-opacity-25">
           <span class="text-white text-4xl">Web</span>
         </div>
