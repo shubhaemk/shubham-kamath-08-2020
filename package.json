@@ -13,6 +13,7 @@
     "v-scroll-lock": "^1.2.0",
     "vue": "^2.6.11",
     "vue-scrollto": "^2.18.2",
+    "vue-svg-loader": "^0.16.0",
     "vue-waypoint": "^3.5.0",
     "vuex": "^3.5.1"
   },
