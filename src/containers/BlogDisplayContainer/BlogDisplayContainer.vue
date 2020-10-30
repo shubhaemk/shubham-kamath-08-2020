@@ -11,16 +11,7 @@
           </div>
 
           <span class="text-3xl font-hairline text-white mb-5 text-left px-8 py-5">
-            Generate GitHub Profile Cards, and download it to share.
-          </span>
-          <span class="text-3xl font-hairline text-white mb-5 text-left px-8 py-5">
-            Built using
-              <span class="text-3xl font-normal text-white mb-5 text-left">React</span>
-            ,
-              <span class="text-3xl font-normal text-white mb-5 text-left">Redux</span>
-            and
-              <span class="text-3xl font-normal text-white mb-5 text-left">Bulma CSS</span>
-            .
+            Tried the new Recoil, A state management library. In the article, I have explained its terms, features and basic syntax of Recoil.
           </span>
           <div class="flex px-8 py-5 justify-end align-middle mt-auto">
             <a href="https://dev.to/shubhamk/recoil-facebook-s-own-state-management-library-26pb" target="_blank" class="flex align-middle">
@@ -38,16 +29,7 @@
           </div>
 
           <span class="text-3xl font-hairline text-white mb-5 text-left px-8 py-5">
-            Portfolio Website to showcase my Projects.
-          </span>
-          <span class="text-3xl font-hairline text-white mb-5 text-left px-8 py-5">
-            Built using
-              <span class="text-3xl font-normal text-white mb-5 text-left">Vue</span>
-            ,
-              <span class="text-3xl font-normal text-white mb-5 text-left">Vuex</span>
-            and
-              <span class="text-3xl font-normal text-white mb-5 text-left">Tailwind CSS</span>
-            .
+            In this article, I have explained how Recoil can be used asynchronously with React Suspense and without it. 
           </span>
           <div class="flex px-8 py-5 justify-end align-middle mt-auto">
             <a href="https://dev.to/shubhamk/recoil-the-asynchronous-way-to-manage-state-part-1-18kk" target="_blank" class="flex align-middle">
