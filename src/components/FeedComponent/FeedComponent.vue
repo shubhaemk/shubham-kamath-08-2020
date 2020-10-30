@@ -8,6 +8,7 @@
     <ProjectContainer :observer="observer" screenName="PROJECT" />
     <ProjectDisplayContainer :observer="observer" screenName="PROJECT" />
     <BlogContainer :observer="observer" screenName="BLOG" />
+    <BlogDisplayContainer :observer="observer" screenName="BLOG"/>
     <AboutContainer :observer="observer" screenName="ABOUT" />
     <ContactContainer :observer="observer" screenName="CONTACT" />
   </div>
@@ -18,6 +19,7 @@ import HomeContainer from "../../containers/HomeContainer/HomeContainer";
 import ProjectContainer from "../../containers/ProjectContainer/ProjectContainer";
 import ProjectDisplayContainer from "../../containers/ProjectDisplayContainer/ProjectDisplayContainer";
 import BlogContainer from "../../containers/BlogContainer/BlogContainer";
+import BlogDisplayContainer from '../../containers/BlogDisplayContainer/BlogDisplayContainer';
 import AboutContainer from "../../containers/AboutContainer/AboutContainer";
 import ContactContainer from "../../containers/ContactContainer/ContactContainer";
 
@@ -28,6 +30,7 @@ export default {
     ProjectContainer,
     ProjectDisplayContainer,
     BlogContainer,
+    BlogDisplayContainer,
     AboutContainer,
     ContactContainer,
   },
