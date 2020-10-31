@@ -1,0 +1,12 @@
+.contact-container {
+    @apply bg-dark;
+    transition: all 0.2s 0.1s;
+}
+
+.contact-container:hover {
+    @apply bg-darker;
+}
+
+.contact-icon {
+  fill: #efe78f;
+}
