@@ -23,9 +23,12 @@ module.exports = {
         "50vh": "50vh",
       },
       width: {
+        "1/2": "50%",
         "fit-content": "fit-content",
         "45per": "45%",
         "90per": "90%",
+        "20per": "20%",
+        "80per": "80%",
       },
       fontSize: {
         "3-5xl": "2rem",
@@ -74,6 +77,7 @@ module.exports = {
         full: "100%",
       },
       backgroundColor: {
+        darker: "#1F1F1F",
         dark: "#12191F",
         home: "#08d9d6",
         contact: "#efe78f",
