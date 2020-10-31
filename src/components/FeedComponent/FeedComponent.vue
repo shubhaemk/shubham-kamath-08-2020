@@ -11,6 +11,7 @@
     <BlogDisplayContainer :observer="observer" screenName="BLOG"/>
     <AboutContainer :observer="observer" screenName="ABOUT" />
     <ContactContainer :observer="observer" screenName="CONTACT" />
+    <CreditContainer :observer="observer" screenName="CONTACT" />
   </div>
 </template>
 
@@ -22,6 +23,7 @@ import BlogContainer from "../../containers/BlogContainer/BlogContainer";
 import BlogDisplayContainer from '../../containers/BlogDisplayContainer/BlogDisplayContainer';
 import AboutContainer from "../../containers/AboutContainer/AboutContainer";
 import ContactContainer from "../../containers/ContactContainer/ContactContainer";
+import CreditContainer from "../../containers/CreditContainer/CreditContainer";
 
 export default {
   name: "FeedComponent",
@@ -33,6 +35,7 @@ export default {
     BlogDisplayContainer,
     AboutContainer,
     ContactContainer,
+    CreditContainer
   },
   props: {
     isMenuOpen: {
