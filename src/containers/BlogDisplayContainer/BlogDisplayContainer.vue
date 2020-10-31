@@ -6,17 +6,28 @@
         <img class="h-full w-1/2" src="../../assets/Test.jpg" />
         <div class="h-full w-1/2 custom-black flex flex-col">
           <div class="flex justify-between mb-10 bg-blog px-8 py-5">
-            <span class="text-4xl font-normal text-white text-left">Recoil - Introduction</span>
+            <span class="text-4xl font-normal text-white text-left"
+              >Recoil - Introduction</span
+            >
             <span class="text-4xl font-normal text-white text-left">00</span>
           </div>
 
-          <span class="text-3xl font-hairline text-white mb-5 text-left px-8 py-5">
-            Tried the new Recoil, A state management library. In the article, I have explained its terms, features and basic syntax of Recoil.
+          <span
+            class="text-3xl font-hairline text-white mb-5 text-left px-8 py-5"
+          >
+            Tried the new Recoil, A state management library. In the article, I
+            have explained its terms, features and basic syntax of Recoil.
           </span>
-          <div class="flex px-8 py-5 justify-end align-middle mt-auto">
-            <a href="https://dev.to/shubhamk/recoil-facebook-s-own-state-management-library-26pb" target="_blank" class="flex align-middle">
-              <span class="text-3xl font-normal text-blog mr-5 font-title">Read More</span>
-              <VisitLogo class="item-logo"/>
+          <div class="flex px-8 py-5 justify-end items-center mt-auto">
+            <a
+              href="https://dev.to/shubhamk/recoil-facebook-s-own-state-management-library-26pb"
+              target="_blank"
+              class="flex items-center"
+            >
+              <span class="text-3xl font-normal text-blog mr-5 font-title"
+                >Read More</span
+              >
+              <VisitLogo class="item-logo" />
             </a>
           </div>
         </div>
@@ -24,17 +35,28 @@
       <div class="w-full h-50vh fourk:h-30vh flex justify-between mb-20">
         <div class="h-full w-1/2 custom-black flex flex-col">
           <div class="flex justify-between mb-10 bg-blog px-8 py-5">
-            <span class="text-4xl font-normal text-white text-left">Recoil - Asynchronous</span>
+            <span class="text-4xl font-normal text-white text-left"
+              >Recoil - Asynchronous</span
+            >
             <span class="text-4xl font-normal text-white text-left">01</span>
           </div>
 
-          <span class="text-3xl font-hairline text-white mb-5 text-left px-8 py-5">
-            In this article, I have explained how Recoil can be used asynchronously with React Suspense and without it. 
+          <span
+            class="text-3xl font-hairline text-white mb-5 text-left px-8 py-5"
+          >
+            In this article, I have explained how Recoil can be used
+            asynchronously with React Suspense and without it.
           </span>
-          <div class="flex px-8 py-5 justify-end align-middle mt-auto">
-            <a href="https://dev.to/shubhamk/recoil-the-asynchronous-way-to-manage-state-part-1-18kk" target="_blank" class="flex align-middle">
-              <span class="text-3xl font-normal text-blog mr-5 font-title">Read More</span>
-              <VisitLogo class="item-logo"/>
+          <div class="flex px-8 py-5 justify-end items-center mt-auto">
+            <a
+              href="https://dev.to/shubhamk/recoil-the-asynchronous-way-to-manage-state-part-1-18kk"
+              target="_blank"
+              class="flex items-center"
+            >
+              <span class="text-3xl font-normal text-blog mr-5 font-title"
+                >Read More</span
+              >
+              <VisitLogo class="item-logo" />
             </a>
           </div>
         </div>
@@ -42,9 +64,13 @@
       </div>
       <div class="py-20 flex justify-end">
         <span class="text-4-5xl text-gray-300 font-hairline mr-5"
-          >Read more on 
+          >Read more on
         </span>
-        <a href="https://dev.to/shubhamk" target="_blank" class="text-4-5xl text-gray-300 font-hairline cursor-pointer">
+        <a
+          href="https://dev.to/shubhamk"
+          target="_blank"
+          class="text-4-5xl text-gray-300 font-hairline cursor-pointer"
+        >
           Dev.to &rarr;
         </a>
       </div>
@@ -54,14 +80,14 @@
 
 <script>
 import { mapState } from "vuex";
-import VisitLogo from '../../assets/visit.svg';
+import VisitLogo from "../../assets/visit.svg";
 
 export default {
   name: "BlogDisplayContainer",
   components: {
-   VisitLogo
+    VisitLogo,
   },
-  data: function () {
+  data: function() {
     return {
       progressLineClass: "bg-project",
     };
@@ -72,7 +98,7 @@ export default {
     }),
   },
   watch: {
-    SCREEN_NAME: function (value) {
+    SCREEN_NAME: function(value) {
       if (value === this.screenName) {
         this.progressLineClass = "bg-blog";
       }
@@ -86,8 +112,8 @@ export default {
     observer: {
       type: IntersectionObserver,
       required: true,
-      default: function () {},
-      validator: function (value) {
+      default: function() {},
+      validator: function(value) {
         return !!value;
       },
     },
@@ -104,5 +130,4 @@ export default {
   fill: #848ccf;
   width: 2rem;
 }
-
 </style>
